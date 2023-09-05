@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   // {path: 'manager', children:ManagerModuleRoutes},
   {path: 'manager', loadChildren: () => import('./manager/manager.module').then((m) => m.ManagerModule)},
-  {path: '**', component:PageNotFoundComponent}
+  {path: '**', component:PageNotFoundComponent},
+  {path: 'user', loadChildren: () => import('./user/user.module').then((m) => m.UserModule)}
 ];
 
 @NgModule({
